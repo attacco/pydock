@@ -10,9 +10,9 @@ RUN rm -rf /var/cache/yum/*
 
 RUN pip3 install cx_Oracle==8.3.0
 
-RUN mkdir -p /apps/oracle/instantclient
-COPY instantclient /apps/oracle/instantclient
-ENV LD_LIBRARY_PATH=/usr/lib:/apps/oracle/instantclient:$LD_LIBRARY_PATH
+RUN mkdir -p /opt/oracle/instantclient
+COPY instantclient /opt/oracle/instantclient
+ENV LD_LIBRARY_PATH=/usr/lib:/opt/oracle/instantclient:$LD_LIBRARY_PATH
 
 RUN mkdir /work
 WORKDIR /work
