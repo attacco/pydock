@@ -1,0 +1,4 @@
+PYDOCK_CONFIG_FILE="pydock.config"
+IMAGE_PLATFORM="linux/amd64"
+IMAGE_NAME="pydock"
+IMAGE_TAG="20230403"
