@@ -7,8 +7,17 @@ Value of this parameter should point to directory containing configuration files
 Example:
 `LOCAL_TNS_ADMIN=/Users/me/apps/oracle/instantclient/network/admin`.
 
+# Run python script
 Then, switch to your project's root directory and execute `<pydock_path>/run.sh <path_to_your_python_script.py>`.
 This command should be executed every time you need to run a Python script.
 
 For your convenience you may register alias: `alias pydock='<pydock_path>/run.sh'`. 
 In that case, execution command become more compact: `pydock <path_to_your_python_script.py>`.
+
+# Use sqlplus
+Switch to your patch's directory and execute `<pydock_path>/sqlplus-run.sh <user@schema>`.
+Then you need to enter a password and may start to execute your SQL scripts.
+To exit the program use `exit` command.
+
+For your convenience, you may register alias: `alias sqlpdock='<pydock_path>/sqlplus-run.sh'`.
+In that case, the execution command becomes more compact: `sqlpdock <user@schema>`.
