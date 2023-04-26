@@ -5,17 +5,17 @@ ARG UPDATE=18
 ARG TNS_ADMIN="/etc/oracle/instantclient/network/admin"
 ARG WORK_DIR="/work"
 
-RUN  yum -y install oracle-release-el7-1.0 && \
-     yum -y install oracle-instantclient${RELEASE}.${UPDATE}-basic \
+RUN  yum -y install oracle-release-el7-1.0
+RUN  yum -y install oracle-instantclient${RELEASE}.${UPDATE}-basic \
                     oracle-instantclient${RELEASE}.${UPDATE}-devel \
-                    oracle-instantclient${RELEASE}.${UPDATE}-sqlplus && \
-     yum -y install oraclelinux-developer-release-el7-1.0 && \
-     yum -y install python3-3.6.8 \
+                    oracle-instantclient${RELEASE}.${UPDATE}-sqlplus
+RUN  yum -y install oraclelinux-developer-release-el7-1.0
+RUN  yum -y install python3-3.6.8 \
                     python3-libs-3.6.8 \
                     python3-pip-9.0.3 \
                     libaio-0.3.109 \
-                    git-1.8.3.1 && \
-     rm -rf /var/cache/yum/*
+                    git-1.8.3.1
+RUN  rm -rf /var/cache/yum/*
 
 RUN pip3 install cx_Oracle==8.3.0
 
